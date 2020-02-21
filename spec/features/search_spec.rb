@@ -28,9 +28,9 @@ describe('User can visit the welcome page') do
     click_on 'Find Book'
 
     expect(current_path).to eq('/search')
-    expect(page).to have_content('Title:')
-    expect(page).to have_content('Author:')
-    expect(page).to have_content('Genres:')
+    expect(page).to have_content('The Man Who Saw Everything')
+    expect(page).to have_content('Deborah Levy')
+    expect(page).to have_content('No Genre')
     expect(page).to have_css('#reviews', count: 2)
   end
 end

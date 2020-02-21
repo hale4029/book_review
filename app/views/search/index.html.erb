@@ -1,11 +1,12 @@
 <h1>Title: <%= @book.title %></h1>
-<li>Author: <%= @book.author %></li>
-<li>Genre: <%= @book.genre %></li>
-
+<section>
+  <li>Author: <%= @book.author %></li>
+  <li>Genre: <%= @book.genre %></li>
+</section>
 
 <h1>Reviews</h1>
 <section>
   <% @book.find_reviews.each do |review| %>
-    <ul id="reviews"><%= review['summary'] %></ul>
+    <li id="reviews"><%= review['summary'] %></li>
   <% end %>
 </section>
